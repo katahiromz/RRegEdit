@@ -1,6 +1,6 @@
 # Independent ReactOS RegEdit
 
-This is `"Independent ReactOS RegEdit"` from [ReactOS](https://reactos.org/).
+This is "Independent ReactOS RegEdit" from ReactOS.
 
 It's a free and open source software for Windows XP and later.
 
