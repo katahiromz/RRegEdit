@@ -1,4 +1,4 @@
-﻿# Independent ReactOS RegEdit
+# Independent ReactOS RegEdit
 
 This is "Independent ReactOS RegEdit" from ReactOS.
 
