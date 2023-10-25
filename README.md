@@ -1,4 +1,4 @@
-# ![](img/regedit-32x32.png) Independent ReactOS RegEdit
+﻿# ![](img/regedit-32x32.png) Independent ReactOS RegEdit
 
 This is `"Independent ReactOS RegEdit"` from [ReactOS](https://reactos.org/).
 
