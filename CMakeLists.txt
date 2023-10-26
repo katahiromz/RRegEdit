@@ -110,12 +110,17 @@ target_compile_definitions(regedit PRIVATE
 
 target_compile_definitions(regedit PRIVATE -DSTRSAFE_NO_DEPRECATE -D__REACTOS__ -D__RREGEDIT__)
 target_include_directories(regedit PUBLIC ./ reactos/ compat/kernel)
+
+if(NOT HAVE_NDK_CMTYPES_H)
+    target_include_directories(regedit PUBLIC compat/kernel)
+endif()
 if(MSVC)
     target_compile_definitions(regedit PRIVATE -D_ANONYMOUS_UNION=)
 endif()
 if(NOT HAVE_NO_SAL2_H)
     target_include_directories(regedit PUBLIC compat/sal)
 endif()
+
 target_link_libraries(regedit PRIVATE user32 gdi32 comctl32 comdlg32 shlwapi advapi32 shell32 msvcrt kernel32 ntdll)
 
 if (MSVC)
