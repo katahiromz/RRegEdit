@@ -4,7 +4,7 @@
 cmake_minimum_required(VERSION 3.5)
 
 # project name and languages
-project(RNotepad C RC)
+project(RRegEdit C RC)
 
 ##############################################################################
 # Architecture
@@ -101,9 +101,9 @@ target_compile_definitions(regedit PRIVATE
     LANGUAGE_ZH_TW)
 
 target_compile_definitions(regedit PRIVATE -DSTRSAFE_NO_DEPRECATE -D__REACTOS__ -D__RREGEDIT__)
-target_include_directories(regedit PUBLIC ./ reactos/)
-if(NOT HAVE_NDK_CMTYPES_H)
-    target_include_directories(regedit PRIVATE compat)
+target_include_directories(regedit PUBLIC ./ reactos/ compat/kernel)
+if(MSVC)
+    target_compile_definitions(regedit PRIVATE -D_ANONYMOUS_UNION=)
 endif()
 target_link_libraries(regedit PRIVATE user32 gdi32 comctl32 comdlg32 shlwapi advapi32 shell32 msvcrt kernel32 ntdll)
 

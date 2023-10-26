@@ -73,7 +73,7 @@ ninja
 strip regedit.exe
 ```
 
-Tested on RosBE.
+Tested on RosBE and Visual Studio 2019.
 
 ## License
 

@@ -11,3 +11,8 @@ int ros_dbg_log(enum __wine_debug_class cls, struct __wine_debug_channel *ch, co
 {
     return 0;
 }
+
+int wine_dbg_printf( const char *format, ... ) __WINE_PRINTF_ATTR(1,2)
+{
+    return 0;
+}
