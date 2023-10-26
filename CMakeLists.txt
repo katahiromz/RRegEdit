@@ -34,6 +34,14 @@ check_include_file(ndk/cmtypes.h HAVE_NDK_CMTYPES_H)
 message(STATUS "HAVE_NDK_CMTYPES_H: ${HAVE_NDK_CMTYPES_H}")
 
 ##############################################################################
+# <no_sal2.h>
+
+include(CheckIncludeFile)
+check_include_file(no_sal2.h HAVE_NO_SAL2_H)
+
+message(STATUS "HAVE_NO_SAL2_H: ${HAVE_NO_SAL2_H}")
+
+##############################################################################
 # regedit.exe
 
 add_executable(regedit WIN32
@@ -104,6 +112,9 @@ target_compile_definitions(regedit PRIVATE -DSTRSAFE_NO_DEPRECATE -D__REACTOS__ 
 target_include_directories(regedit PUBLIC ./ reactos/ compat/kernel)
 if(MSVC)
     target_compile_definitions(regedit PRIVATE -D_ANONYMOUS_UNION=)
+endif()
+if(NOT HAVE_NO_SAL2_H)
+    target_include_directories(regedit PUBLIC compat/sal)
 endif()
 target_link_libraries(regedit PRIVATE user32 gdi32 comctl32 comdlg32 shlwapi advapi32 shell32 msvcrt kernel32 ntdll)
 
