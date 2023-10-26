@@ -11,9 +11,9 @@
 #include <shellapi.h>
 #include <strsafe.h>
 #include <stdlib.h>
-#include <stdio.h>
 
 #ifdef __RREGEDIT__
+#include <stdio.h>
 #include "compat/compat.h"
 #endif /* __RREGEDIT__ */
 

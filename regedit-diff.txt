@@ -1,5 +1,6 @@
 // Please insert the following code into regedit.h .
 
 #ifdef __RREGEDIT__
+#include <stdio.h>
 #include "compat/compat.h"
 #endif /* __RREGEDIT__ */
