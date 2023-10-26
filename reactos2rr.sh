@@ -2,7 +2,6 @@
 
 cp -fr ../reactos/base/applications/regedit/lang/ .
 cp -fr ../reactos/base/applications/regedit/res/ .
-cp -fr ../reactos/base/applications/regedit/clb/ .
 cp -fr ../reactos/base/applications/regedit/*.c .
 cp -fr ../reactos/base/applications/regedit/*.h .
 cp -fr ../reactos/base/applications/regedit/*.rc .
