@@ -18,14 +18,6 @@ if (MSVC)
 endif()
 
 ##############################################################################
-# <accctrl.h>
-
-include(CheckIncludeFile)
-check_include_file(accctrl.h HAVE_ACCCTRL_H)
-
-message(STATUS "HAVE_ACCCTRL_H: ${HAVE_ACCCTRL_H}")
-
-##############################################################################
 # <ndk/cmtypes.h>
 
 include(CheckIncludeFile)
