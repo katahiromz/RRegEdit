@@ -2,11 +2,14 @@
 
 #include <errno.h>
 
+#ifndef SI_ACCESS_SPECIFIC
 #define SI_ACCESS_SPECIFIC          0x00010000
 #define SI_ACCESS_GENERAL           0x00020000
 #define SI_ACCESS_CONTAINER         0x00040000
 #define SI_ACCESS_PROPERTY          0x00080000
+#endif
 
+#ifndef SI_EDIT_PERMS
 #define SI_EDIT_PERMS               0x00000000
 #define SI_EDIT_OWNER               0x00000001
 #define SI_EDIT_AUDITS              0x00000002
@@ -64,3 +67,4 @@ typedef enum _SI_PAGE_TYPE
     SI_PAGE_AUDIT,
     SI_PAGE_OWNER
 } SI_PAGE_TYPE;
+#endif

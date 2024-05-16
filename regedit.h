@@ -12,14 +12,15 @@
 #include <strsafe.h>
 #include <stdlib.h>
 
-#ifdef __RREGEDIT__
-#include <stdio.h>
-#include "compat/compat.h"
-#endif /* __RREGEDIT__ */
-
 #include "main.h"
 #include "hexedit.h"
 #include "security.h"
 #include "wine/debug.h"
+
+#ifdef __RREGEDIT__
+#include <stdio.h>
+#include "compat/compat.h"
+inline ULONG WINAPIV DbgPrint(PCCH Format,...) { return 0; }
+#endif /* __RREGEDIT__ */
 
 #endif /* _REGEDIT_H */

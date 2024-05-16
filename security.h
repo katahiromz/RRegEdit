@@ -1,5 +1,9 @@
 #pragma once
 
+#ifdef __RREGEDIT__
+#include <aclui.h>
+#endif
+
 BOOL
 InitializeAclUiDll(VOID);
 

@@ -113,7 +113,7 @@ if(NOT HAVE_NO_SAL2_H)
     target_include_directories(regedit PUBLIC compat/sal)
 endif()
 
-target_link_libraries(regedit PRIVATE user32 gdi32 comctl32 comdlg32 shlwapi advapi32 shell32 msvcrt kernel32 ntdll)
+target_link_libraries(regedit PRIVATE user32 gdi32 comctl32 comdlg32 shlwapi advapi32 shell32 msvcrt kernel32)
 
 if (MSVC)
     # Use wWinMain
