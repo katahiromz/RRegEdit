@@ -16,3 +16,8 @@ int wine_dbg_printf( const char *format, ... ) __WINE_PRINTF_ATTR(1,2)
 {
     return 0;
 }
+
+ULONG WINAPIV DbgPrint(PCCH Format,...)
+{
+    return 0;
+}

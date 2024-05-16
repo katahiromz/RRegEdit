@@ -68,3 +68,5 @@ typedef enum _SI_PAGE_TYPE
     SI_PAGE_OWNER
 } SI_PAGE_TYPE;
 #endif
+
+ULONG WINAPIV DbgPrint(PCCH Format,...);

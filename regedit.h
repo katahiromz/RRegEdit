@@ -20,7 +20,6 @@
 #ifdef __RREGEDIT__
 #include <stdio.h>
 #include "compat/compat.h"
-inline ULONG WINAPIV DbgPrint(PCCH Format,...) { return 0; }
 #endif /* __RREGEDIT__ */
 
 #endif /* _REGEDIT_H */
